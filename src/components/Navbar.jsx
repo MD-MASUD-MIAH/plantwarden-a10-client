@@ -54,7 +54,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-end flex gap-4">
           <Link to='/login' className="btn bg-[#2ecc71] hover:bg-[#27ae60] text-white font-semibold py-2 px-5  shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">Login</Link>
-          <button className="btn bg-[#2ecc71] hover:bg-[#27ae60] text-white font-semibold py-2 px-5  shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">Register</button>
+          <Link to='/register' className="btn bg-[#2ecc71] hover:bg-[#27ae60] text-white font-semibold py-2 px-5  shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">Register</Link>
         </div>
       </div>
     </div>

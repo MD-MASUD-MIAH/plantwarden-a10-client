@@ -1,15 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router';
-const Login = () => {
+const Register = () => {
     return (
         <div>
             
 
-   <div className=' w-11/12 mx-auto py-10 flex flex-col items-center justify-center'>
+
+
+ <div className=' w-11/12 mx-auto py-10 flex flex-col items-center justify-center'>
 
 
 <div className="md:max-w-sm   mx-auto border border-[#2ecc71] rounded p-6 shadow ">
-      <h2 className="text-xl font-semibold mb-6">Login Now !</h2>
+      <h2 className="text-xl font-semibold mb-6">Register Now !</h2>
       <form className="space-y-4">
         <div>
           <label className="block text-sm mb-1">Username or Email</label>
@@ -43,13 +45,13 @@ const Login = () => {
           type="submit"
           className="w-full bg-[#2ecc71] hover:bg-[#27ae60] text-white font-semibold py-2 px-5  shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out "
         >
-          Login
+         Register
         </button>
 
         <p className="text-center text-sm mt-4">
-          Don’t have an account? Please{' '} 
-          <Link to='/register' href="#" className="text-[#2ecc71] underline">
-          Register
+        Already  have an account? Please{' '} 
+          <Link to='/login' href="#" className="text-[#2ecc71] underline">
+         Login
           </Link>
         </p>
       </form>
@@ -83,10 +85,10 @@ const Login = () => {
 </div>
 
 
-        </div>
 
-       
+
+        </div>
     );
 };
 
-export default Login;
+export default Register;
