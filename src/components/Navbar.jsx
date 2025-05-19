@@ -1,6 +1,22 @@
 import { NavLink ,Link} from "react-router";
 import logo from "../assets/logo1.png";
+import { use } from "react";
+import { AuthContext } from "../contexts/AuthContext";
 const Navbar = () => {
+
+  const {user,logout} = use(AuthContext) 
+
+  const handleLogout = ()=>{
+
+
+    logout().then(()=>{}).catch(error=>{
+
+      console.log(error.message);
+      
+    })
+  }
+  
+  
   const links = (
     <>
       <NavLink to="/">Home</NavLink>
@@ -52,9 +68,33 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <div className="navbar-end flex gap-4">
-          <Link to='/login' className="btn bg-[#2ecc71] hover:bg-[#27ae60] text-white font-semibold py-2 px-5  shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">Login</Link>
-          <Link to='/register' className="btn bg-[#2ecc71] hover:bg-[#27ae60] text-white font-semibold py-2 px-5  shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">Register</Link>
+        <div className="navbar-end ">
+      {
+
+user ?<div className="flex gap-4 justify-center items-center">
+
+  <div className="group relative flex items-center">
+  
+  <span className="absolute right-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-800 text-white text-sm px-3 py-1 rounded-md whitespace-nowrap z-10">
+    {user?.displayName || "Please Enter Name"}
+  </span>
+
+ 
+ {
+
+  user &&  <img
+  className="rounded-full  h-8 w-8 md:w-[50px] md:h-[50px] cursor-pointer"
+  src={user && user.photoURL}
+  alt="User"
+/>
+ }
+</div>
+<button onClick={handleLogout} className="btn bg-[#2ecc71] hover:bg-[#27ae60] text-white font-semibold py-2 px-5  shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">  Logout</button>
+
+</div> : <div className="flex gap-4">    <Link to='/login' className="btn bg-[#2ecc71] hover:bg-[#27ae60] text-white font-semibold py-2 px-5  shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">Login</Link>
+          <Link to='/register' className="btn bg-[#2ecc71] hover:bg-[#27ae60] text-white font-semibold py-2 px-5  shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">Register</Link></div>
+ 
+      }
         </div>
       </div>
     </div>
