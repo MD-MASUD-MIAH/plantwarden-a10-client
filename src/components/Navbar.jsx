@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import { NavLink ,Link} from "react-router";
 import logo from "../assets/logo1.png";
 const Navbar = () => {
   const links = (
@@ -53,7 +53,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end flex gap-4">
-          <button className="btn bg-[#2ecc71] hover:bg-[#27ae60] text-white font-semibold py-2 px-5  shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">Login</button>
+          <Link to='/login' className="btn bg-[#2ecc71] hover:bg-[#27ae60] text-white font-semibold py-2 px-5  shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">Login</Link>
           <button className="btn bg-[#2ecc71] hover:bg-[#27ae60] text-white font-semibold py-2 px-5  shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">Register</button>
         </div>
       </div>

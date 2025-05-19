@@ -4,6 +4,7 @@ import Home from "../components/Home";
 import AllPlants from "../components/AllPlants";
 import Addplants from "../components/Addplants";
 import Myplant from "../components/Myplant";
+import Login from "../components/Login";
 
 
 export const router = createBrowserRouter([
@@ -14,6 +15,7 @@ export const router = createBrowserRouter([
     {index:true, Component:Home},
     {path:'/allplans',Component:AllPlants},
     {path:'/addplnats',Component:Addplants},
-    {path:'/myplants',Component:Myplant}
+    {path:'/myplants',Component:Myplant},
+    {path:'/login',Component:Login}
   ]}
 ])
