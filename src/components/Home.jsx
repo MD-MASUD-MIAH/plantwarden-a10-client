@@ -3,6 +3,7 @@ import Banner from './Banner';
 import Newplants from './Newplants';
 import { useLoaderData } from 'react-router';
 import PlantsFe from './PlantsFe';
+import PlantCareTips from './PlantCareTips';
 
 const Home = () => {
     
@@ -12,6 +13,8 @@ const Home = () => {
         <div> 
             <Banner></Banner>
            <Newplants plants={plants}></Newplants>
+
+           <PlantCareTips></PlantCareTips>
            <PlantsFe></PlantsFe>
         </div>
     );

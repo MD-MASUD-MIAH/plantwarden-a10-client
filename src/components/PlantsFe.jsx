@@ -1,8 +1,8 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'; 
 const PlantsFe = () => {
     return (
-        <div>
+        <div className='py-10 md:py-20'>
 
             <div className=''>
 
@@ -15,9 +15,23 @@ const PlantsFe = () => {
 </p>
 </div>
 
-              <div className="w-11/12 mx-auto pb-10 md:pb-50 mt-12 px-4 grid md:grid-cols-2 gap-35 md:gap-10 items-center">
+              <div className="w-11/12 mx-auto pb-10 md:pb-50 mt-12 px-4 flex flex-col-reverse md:flex-row gap-35 md:gap-10 items-center">
       {/* Left Image Section */}
-      <div className="relative group">
+     
+ <div className="space-y-4 md:w-[50%]">
+        <p className="text-[#2ecc71] font-semibold"> Make it easy.</p>
+        <h2 className="text-3xl font-bold text-gray-800">Helping Your Plants Grow Strong</h2>
+        <p className="text-gray-600">
+       “We are here to help your plants grow healthy and strong with simple and practical advice. Whether it’s reminding you when to water, how to fertilize, or protect from pests, we guide you every step of the way. With easy-to-follow tips and useful tools, taking care of your plants becomes fun and stress-free. Watch your plants thrive and flourish like never before!”
+
+
+        </p>
+      
+      </div>
+      {/* Right Text Section */}
+     
+
+ <div className="relative group">
         <motion.img 
          initial={{ scale: 1 }}
           whileHover={{ scale: 1.05 }}
@@ -38,17 +52,6 @@ const PlantsFe = () => {
         > </motion.img>
       </div>
 
-      {/* Right Text Section */}
-      <div className="space-y-4">
-        <p className="text-[#2ecc71] font-semibold"> Make it easy.</p>
-        <h2 className="text-3xl font-bold text-gray-800">Helping Your Plants Grow Strong</h2>
-        <p className="text-gray-600">
-       “We are here to help your plants grow healthy and strong with simple and practical advice. Whether it’s reminding you when to water, how to fertilize, or protect from pests, we guide you every step of the way. With easy-to-follow tips and useful tools, taking care of your plants becomes fun and stress-free. Watch your plants thrive and flourish like never before!”
-
-
-        </p>
-      
-      </div>
     </div>
             
         </div>
