@@ -6,6 +6,7 @@ import Addplants from "../components/Addplants";
 import Myplant from "../components/Myplant";
 import Login from "../components/Login";
 import Register from "../components/Register";
+import PrivateRoute from "../contexts/PrivateRoute";
 
 
 export const router = createBrowserRouter([
@@ -15,8 +16,8 @@ export const router = createBrowserRouter([
 
     {index:true, Component:Home},
     {path:'/allplans',Component:AllPlants},
-    {path:'/addplnats',Component:Addplants},
-    {path:'/myplants',Component:Myplant},
+    {path:'/addplnats',element:<PrivateRoute><Addplants></Addplants></PrivateRoute>},
+    {path:'/myplants',element:<PrivateRoute><Myplant></Myplant></PrivateRoute>},
     {path:'/login',Component:Login},
     {path:'/register',Component:Register}
   ]}

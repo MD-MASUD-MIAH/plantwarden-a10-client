@@ -1,9 +1,11 @@
 import React, { use } from 'react';
-import { Link } from 'react-router';
+import { Link ,useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../contexts/AuthContext';
+import Swal from 'sweetalert2';
 const Login = () => {
 
-
+ const location = useLocation()
+const navigate =  useNavigate() 
   const {loginUser,googleLogin} = use(AuthContext) 
 
   const handleLogin  = (e)=>{
@@ -17,13 +19,27 @@ const Login = () => {
     const password = user.get('password') 
     
 
+
     loginUser(email,password).then(res=>{
 
+       Swal.fire({
+  title: " Login Successfully!",
+  icon: "success",
+  draggable: true
+});
+ navigate(location.state ? location.state : '/');
       console.log(res.user);
       
     }).catch(error=>{
 
       console.log(error.message);
+
+      Swal.fire({
+  icon: "error",
+  title: "Oops...",
+  text: `${error.message}`,
+ 
+});
       
     })
   }
@@ -33,11 +49,26 @@ const Login = () => {
 
     googleLogin().then(()=>{
 
-
+      Swal.fire({
+  title: "Google Login Successfully!",
+  icon: "success",
+  draggable: true
+});
+ navigate(location.state ? location.state : '/');
     }).catch(error=>{
 
 
   console.log(error.message);
+
+
+     Swal.fire({
+  icon: "error",
+  title: "Oops...",
+  text: `${error.message}`,
+ 
+});
+
+  
     })
     
   }

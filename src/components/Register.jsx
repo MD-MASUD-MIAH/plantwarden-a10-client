@@ -1,9 +1,11 @@
 import React, { use } from 'react';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../contexts/AuthContext';
+import Swal from 'sweetalert2';
 const Register = () => {
 
-
+  const location = useLocation() 
+  const navigate = useNavigate()
   const { createUser, updateUser, setUser,googleLogin} = use(AuthContext)
 
   const handleRegister = (e)=>{
@@ -31,9 +33,24 @@ e.preventDefault()
            
            
             setUser({ ...user, displayName: name, photoURL: photo });
+
+             Swal.fire({
+              title: " Login Successfully!",
+              icon: "success",
+              draggable: true
+            });
+navigate(location.state ? location.state : '/');
+
         }).catch(error => {
             console.log(error);
             setUser(user);  
+
+               Swal.fire({
+  icon: "error",
+  title: "Oops...",
+  text: `${error.message}`,
+ 
+});
         });
         
         }).catch(error=>{
@@ -42,6 +59,12 @@ e.preventDefault()
 
 
 
+               Swal.fire({
+  icon: "error",
+  title: "Oops...",
+  text: `${error.message}`,
+ 
+});
 
 
 
@@ -61,10 +84,21 @@ e.preventDefault()
 
     googleLogin().then(()=>{
 
-
+       Swal.fire({
+  title: "Google Login Successfully!",
+  icon: "success",
+  draggable: true
+});
+navigate(location.state ? location.state : '/');
     }).catch(error=>{
 
 
+               Swal.fire({
+  icon: "error",
+  title: "Oops...",
+  text: `${error.message}`,
+ 
+});
   console.log(error.message);
     })
     

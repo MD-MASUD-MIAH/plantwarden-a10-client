@@ -2,6 +2,7 @@ import { NavLink ,Link} from "react-router";
 import logo from "../assets/logo1.png";
 import { use } from "react";
 import { AuthContext } from "../contexts/AuthContext";
+import Swal from "sweetalert2";
 const Navbar = () => {
 
   const {user,logout} = use(AuthContext) 
@@ -9,11 +10,54 @@ const Navbar = () => {
   const handleLogout = ()=>{
 
 
-    logout().then(()=>{}).catch(error=>{
+   
+
+
+Swal.fire({
+  title: "Are you sure?",
+  text: "You won't be able to Logout!",
+  icon: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#3085d6",
+  cancelButtonColor: "#d33",
+  confirmButtonText: "Yes, Logout!"
+}).then((result) => {
+  if (result.isConfirmed) {
+
+
+
+ logout().then(()=>{
+
+ Swal.fire({
+      title: "Deleted!",
+      text: "Your file has been deleted.",
+      icon: "success"
+    });
+
+ }).catch(error=>{
 
       console.log(error.message);
+
+
       
+         Swal.fire({
+  icon: "error",
+  title: "Oops...",
+  text: `${error.message}`,
+ 
+});
     })
+
+
+
+   
+  }
+});
+
+
+
+
+
   }
   
   
