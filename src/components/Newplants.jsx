@@ -22,7 +22,7 @@ const Newplants = ({plants}) => {
 
   <div className='w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-3 md:gap-20 py-10'>
                 {
-                  plants.map(data=><PlanstCard  key={data.id} data={data}></PlanstCard>)
+                  plants.slice(0, 6).map(data=><PlanstCard  key={data.id} data={data}></PlanstCard>)
                 }
             </div>
 

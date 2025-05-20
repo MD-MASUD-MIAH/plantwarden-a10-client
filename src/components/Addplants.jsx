@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { use, useState } from 'react';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../contexts/AuthContext';
 
 
 const Addplants = () => {
+
+  const bdTime = new Date(Date.now() + 6 * 60 * 60 * 1000); 
+const today = bdTime.toISOString().split("T")[0];
+const [date, setDate] = useState(today);
+
+  const {user} = use(AuthContext)
 
 
     const handleaddPlants =(e)=>{
@@ -99,19 +106,32 @@ const Addplants = () => {
 
         <div>
           <label className="block text-sm font-medium mb-1">User Email</label>
-          <input type="email" name='email' className="input input-bordered w-full" />
+          <input type="email" name='email' value={user.email} className="input input-bordered w-full" />
         </div>
 
         <div>
           <label className="block text-sm font-medium mb-1">User Name</label>
-          <input name='name' type="text" placeholder=" Hossin Masood" className="input input-bordered w-full" />
+          <input name='name' value={user.displayName} type="text"  className="input input-bordered w-full" />
         </div>
 
          <div>
           <label className="block text-sm font-medium mb-1">Description</label>
-          <textarea defaultValue={`A bold plant with glossy leaves. It adds a modern touch to indoor spaces and grows tall over time`} className="textarea textarea-bordered w-full" rows="3" placeholder="Brief description..."></textarea>
+          <textarea name='description' defaultValue={`A bold plant with glossy leaves. It adds a modern touch to indoor spaces and grows tall over time`} className="textarea textarea-bordered w-full" rows="3" placeholder="Brief description..."></textarea>
         </div>
        
+       <div>
+             <label htmlFor="date" className="block text-sm font-medium mb-1">
+       Adding Date
+      </label>
+      <input
+      name='addingDate'
+        type="date"
+        id="date"
+        value={date}
+        onChange={(e) => setDate(e.target.value)}
+        className="input input-bordered w-full"
+      />
+       </div>
         <div className="md:col-span-2">
           <button
             type="submit"

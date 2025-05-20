@@ -68,7 +68,7 @@ These newly added plants bring freshness and green vibes to your space. Check ou
 
     </div>
   </div>
-         {/* <p className=' hidden md:block text-[14px]'>{description}</p>   */}
+         <p className=' hidden md:block text-[14px]'>{plant.description}</p>  
 
       
          </div> 

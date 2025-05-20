@@ -40,7 +40,7 @@ const PlanstCard = ({data}) => {
   
 
  <p className="font-bold">
-    <span className="font-normal">Sunlight:  </span> {data.nextDate}
+    <span className="font-normal">Added Date:  </span> {data.addingDate}
   </p>
 
   </div>

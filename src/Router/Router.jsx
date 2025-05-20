@@ -28,6 +28,6 @@ export const router = createBrowserRouter([
       
       loader:({params})=>fetch(`http://localhost:4000/plants/${params.id}`),
       
-      Component:DetailsPage}
+      element:<PrivateRoute><DetailsPage></DetailsPage></PrivateRoute>}
   ]}
 ])
