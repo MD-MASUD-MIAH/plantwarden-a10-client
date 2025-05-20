@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Snake Plant",
+    "scientificName": "Sansevieria trifasciata",
+    "image": "https://i.ibb.co/s9pCGM75/eight-houseplants-that-thrive-in-low-light-8-0922-2000-39845777816b4f1f8a49b6ef758ef35e.jpg",
+    "careLevel": "Easy",
+    "watering": "Once every 10-14 days",
+    "sunlight": "Low to bright",
+    "description": "A hardy plant perfect for beginners. It purifies air and thrives with minimal care."
+  },
+  {
+    "id": 2,
+    "name": "Peace Lily",
+    "scientificName": "Spathiphyllum wallisii",
+    "image": "https://i.ibb.co/8psj1f7/q-YNPup-Rnsp-GWPF4886-Z7h-B.jpg",
+    "careLevel": "Medium",
+    "watering": "Once a week",
+    "sunlight": "Low to medium",
+    "description": "Known for its elegant white blooms and air-purifying qualities. Great for indoor spaces."
+  },
+  {
+    "id": 3,
+    "name": "Spider Plant",
+    "scientificName": "Chlorophytum comosum",
+    "image": "https://i.ibb.co/6cjC4FBT/detaching-spider-plant-plantlets.webp",
+    "careLevel": "Easy",
+    "watering": "Every 7-10 days",
+    "sunlight": "Bright indirect",
+    "description": "A fast-growing plant with arching leaves. Ideal for hanging baskets and beginners."
+  },
+  {
+    "id": 4,
+    "name": "Fiddle Leaf Fig",
+    "scientificName": "Ficus lyrata",
+    "image": "https://i.ibb.co/Tx4ZXQ1Z/Outdoor-Fiddle-Leaf-Fig-1024x768-1.jpg",
+    "careLevel": "Hard",
+    "watering": "Once a week",
+    "sunlight": "Filtered bright",
+    "description": "Stylish and popular for home decor. Requires consistent care and proper lighting."
+  },
+  {
+    "id": 5,
+    "name": "Aloe Vera",
+    "scientificName": "Aloe barbadensis miller",
+    "image": "https://i.ibb.co/zVdSgD5L/Aloe-Vera-Plant-Care-Growing-Guide-jpj-1-0786b3ce-c2e9-4c18-8a6d-c24476ac0d92.webp",
+    "careLevel": "Easy",
+    "watering": "Every 2-3 weeks",
+    "sunlight": "Direct or bright",
+    "description": "A succulent with healing properties. Great for sunny windowsills and low-maintenance care."
+  },
+  {
+    "id": 6,
+    "name": "Rubber Plant",
+    "scientificName": "Ficus elastica",
+    "image": "https://i.ibb.co/60pYZSmP/90912360.jpg",
+    "careLevel": "Medium",
+    "watering": "Once a week",
+    "sunlight": "Bright indirect",
+    "description": "A bold plant with glossy leaves. It adds a modern touch to indoor spaces and grows tall over time."
+  }
+]
