@@ -14,18 +14,18 @@ const DetailsPage = () => {
           
  <div className=''>
 
-<h1 className='text-center pt-10 text-4xl font-bold'>Event Overview</h1> 
+<h1 className='text-center pt-10 text-4xl font-bold'>Meet Our New Plant</h1> 
 
 
-<p className='text-center py-4 text-gray-400'>Thought for a couple of seconds
+<p className='text-center text-xs py-4 text-gray-400'>Thought for a couple of seconds
 
+These newly added plants bring freshness and green vibes to your space. Check out what’s just arrived!
 
-
-Get all the essential details you need in one place. Discover when and where the event takes place, <br /> <span className='hidden md:block'>  who’s on the lineup, and what experiences await you—from live performances and interactive workshops to  food stalls and art installations. Whether <br /> you’re planning your day, looking for must-see highlights, or checking practical info like entryrequirements and timings, this overview has   <br /> you covered so you can make  the most of the event.</span>
+<br /> New plants, new love! Explore our latest collection of charming plants that will add beauty and calm to any space.
 </p>
 </div>
 
-             <div className='  p-4 md:py-23  '> 
+             <div className='  p-4 md:py-10  '> 
 
        <div className='border grid grid-cols-1 gap-20 lg:grid-cols-3 justify-center items-center  border-gray-400 rounded-2xl p-5 md:p-10'>
       
