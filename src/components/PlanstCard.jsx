@@ -13,20 +13,20 @@ const PlanstCard = ({data}) => {
        
         <figure>
           <img className='h-[250px] w-full'
-           src={data.image}></img> 
+           src={data.photo}></img> 
         </figure>
         <div className="card-body">
-          <h2 className="card-title   text-center">{data.name}</h2> 
+          <h2 className="card-title   text-center">{data.plantName}</h2> 
 
           <div className="grid grid-cols-1 justify-center  md:flex md:justify-between"> 
  <div>
 
   <p className="font-bold">
-    <span className="font-normal">Scientific Name:</span> {data.scientificName}
+    <span className="font-normal">Frequency:</span> {data.frequency}
   </p>
 
   <p className="font-bold">
-    <span className="font-normal ">Watering:</span>  {data.watering}
+    <span className="font-normal ">Watering:</span>  {data.lastLate}
   </p>
  
 
@@ -40,7 +40,7 @@ const PlanstCard = ({data}) => {
   
 
  <p className="font-bold">
-    <span className="font-normal">Sunlight:  </span> {data.sunlight}
+    <span className="font-normal">Sunlight:  </span> {data.nextDate}
   </p>
 
   </div>
@@ -51,7 +51,7 @@ const PlanstCard = ({data}) => {
 
         
           <div className="card-actions justify-end">
-            <Link  to={`/details/${data.id}`} className="btn w-full  bg-[#2ecc71] hover:bg-[#27ae60] text-white font-semibold py-2 px-5  shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">View More</Link>
+            <Link  to={`/details/${data._id}`} className="btn w-full  bg-[#2ecc71] hover:bg-[#27ae60] text-white font-semibold py-2 px-5  shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">View More</Link>
           </div>
         </div>
       </div>

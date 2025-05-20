@@ -1,12 +1,12 @@
-import React, { use } from 'react';
+
 import PlanstCard from './PlanstCard';
 
-const  planst =  fetch('plants.json').then(res=>res.json())
-const Newplants = () => {
+// const  planst =  fetch('plants.json').then(res=>res.json()) 
+const Newplants = ({plants}) => {
 
-    const  plantData= use(planst) 
+    // const  plantData= use(planst)  
 
-    console.log(plantData);
+    // console.log(plantData); 
     
     return (
         <div>
@@ -22,7 +22,7 @@ const Newplants = () => {
 
   <div className='w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-3 md:gap-20 py-10'>
                 {
-                   plantData.map(data=><PlanstCard  key={data.id} data={data}></PlanstCard>)
+                  plants.map(data=><PlanstCard  key={data.id} data={data}></PlanstCard>)
                 }
             </div>
 

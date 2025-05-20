@@ -7,7 +7,7 @@ const Footer = () => {
        items-center bg-[#2ecc71] text-neutral-content p-10"> 
 
    
-                <div className="  flex font-bold items-center gap-3 md:text-xl mr-7 "><img className={`w-18 filter invert  brightness-0 " `}  src={logo} alt="" /> <p className='md:mt-4'> PlantWarden</p></div> 
+                <div className="  flex font-bold items-center gap-3 md:text-xl mr-7 "><img className={`w-18  " `}  src={logo} alt="" /> <p className='md:mt-4'> PlantWarden</p></div> 
 
                 <div className='flex gap-1 md:gap-10 border-b md:px-10 py-4 text-xs '>
                 <a class="link link-hover">Terms and conditions</a>
