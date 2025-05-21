@@ -64,6 +64,11 @@ These newly added plants bring freshness and green vibes to your space. Check ou
     <h1 className="font-bold">{plant.category}</h1>
   </div>
   <div className="flex">
+    <span className="font-normal min-w-[100px]  md:min-w-[200px]">Health Status:</span>
+    <h1 className="font-bold">{plant.healthStatus}</h1>
+  </div>
+
+  <div className="flex">
     <span className="font-normal min-w-[100px]  md:min-w-[200px]">Care Level:</span>
     <h1 className="font-bold">{plant.careLevel}</h1>
   </div>

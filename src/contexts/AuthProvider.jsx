@@ -57,7 +57,7 @@ const logout = () => {
     };
   }, []);
 
-
+ const [sort, setSort] = useState(false); 
 
     const userInfo = {
 
@@ -68,7 +68,8 @@ const logout = () => {
   loading,
   user,
   logout,
-  googleLogin
+  googleLogin,
+  sort, setSort
     }
     return (
        <AuthContext value={userInfo}>

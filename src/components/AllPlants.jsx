@@ -1,13 +1,28 @@
-import React from 'react';
+import React, { use, useEffect, useState } from 'react';
 import { FaEye } from "react-icons/fa";
-import { useLoaderData } from 'react-router'; 
+import {  useLoaderData } from 'react-router'; 
 import { Link } from 'react-router';
+import { AuthContext } from '../contexts/AuthContext';
 
 const AllPlants = () => {
 
-  const plants= useLoaderData() 
+  const plants = useLoaderData()
 
+  const {sort, setSort} = use(AuthContext)
   
+  const [tree,setTree] = useState(plants)
+ 
+
+useEffect(() => {
+  fetch(`http://localhost:4000/plants?sortBy=${sort}`)
+    .then(res => res.json())
+    .then(data => {
+    setTree(data)
+
+    
+    });
+}, [sort,setTree]);
+
   
     return (
        <div className="w-11/12 mx-auto py-10 overflow-x-auto">
@@ -17,14 +32,14 @@ const AllPlants = () => {
         <th>No.</th>
         <th>Plant Name</th>
         <th>Category</th>
-        <th>Watering Next Date</th>
+        <th>{sort?'Watering Next Date ':'Watering'}<button className='btn ml-4  text-white text-xs bg-[#2ecc71]' onClick={()=>setSort(!sort)} > {sort ?"unsort":'sort'}</button></th>
         <th>Frequency</th>
         <th></th>
       </tr>
     </thead>
 
     {
-      plants.map((plant, index) => (
+      tree.slice().reverse().map((plant, index) => (
         <tbody key={plant._id}>
           <tr>
             <th>{index + 1}</th>
@@ -46,10 +61,9 @@ const AllPlants = () => {
               <br />
               <span className="badge badge-ghost badge-sm">CL: {plant.careLevel}</span>
             </td>
-            <td>
-           
-            {plant.nextDate}
-            </td>
+           {
+            sort?<td>   {plant.nextDate}</td> : <td> LD : {plant.lastLate} <br /> ND : {plant.nextDate} </td>
+           }
             <td>{plant.frequency}</td>
             <th>
               <Link to={`/details/${plant._id}`} className="btn btn-ghost btn-xs text-[#2ecc71]">Details</Link>

@@ -1,12 +1,25 @@
 
-import PlanstCard from './PlanstCard';
 
-// const  planst =  fetch('plants.json').then(res=>res.json()) 
+import PlanstCard from './PlanstCard';
+import { AuthContext } from '../contexts/AuthContext';
+import { use, useEffect, useState } from 'react';
+
+ 
 const Newplants = ({plants}) => {
 
-    // const  plantData= use(planst)  
+    const [tree,setTree] = useState(plants)
 
-    // console.log(plantData); 
+    const {sort} = use(AuthContext)
+
+   useEffect(() => {
+     fetch(`http://localhost:4000/plants?sortBy=${sort}`)
+       .then(res => res.json())
+       .then(data => {
+       setTree(data)
+   
+       
+       });
+   }, [sort,setTree]);
     
     return (
         <div>
@@ -22,7 +35,7 @@ const Newplants = ({plants}) => {
 
   <div className='w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-3 md:gap-20 py-10'>
                 {
-                  plants.slice(0, 6).map(data=><PlanstCard  key={data.id} data={data}></PlanstCard>)
+                  tree.slice(0, 6).map(data=><PlanstCard  key={data._id} data={data}></PlanstCard>)
                 }
             </div>
 
