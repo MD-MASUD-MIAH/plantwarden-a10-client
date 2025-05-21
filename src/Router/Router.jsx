@@ -8,6 +8,7 @@ import Login from "../components/Login";
 import Register from "../components/Register";
 import PrivateRoute from "../contexts/PrivateRoute";
 import DetailsPage from "../components/DetailsPage";
+import Update from "../components/Update";
 
 
 export const router = createBrowserRouter([
@@ -19,15 +20,32 @@ export const router = createBrowserRouter([
       
       loader:()=>fetch('http://localhost:4000/plants'),
       Component:Home},
-    {path:'/allplans',Component:AllPlants},
+    {path:'/allplans',
+      
+       loader:()=>fetch('http://localhost:4000/plants'),
+      
+      Component:AllPlants},
     {path:'/addplnats',element:<PrivateRoute><Addplants></Addplants></PrivateRoute>},
-    {path:'/myplants',element:<PrivateRoute><Myplant></Myplant></PrivateRoute>},
+
+
+
+    {path:'/myplants',
+      
+        loader:()=>fetch('http://localhost:4000/plants'),
+      element:<PrivateRoute><Myplant></Myplant></PrivateRoute>},
     {path:'/login',Component:Login},
     {path:'/register',Component:Register},
     {path:'/details/:id',
       
       loader:({params})=>fetch(`http://localhost:4000/plants/${params.id}`),
       
-      element:<PrivateRoute><DetailsPage></DetailsPage></PrivateRoute>}
-  ]}
+      element:<PrivateRoute><DetailsPage></DetailsPage></PrivateRoute>},
+      {path:'/update/:id', 
+        
+        loader:({params})=>fetch(`http://localhost:4000/plants/${params.id}`),
+        
+        element:<PrivateRoute><Update></Update></PrivateRoute>}
+  ]},
+
+  
 ])

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router';
-
+import { FcViewDetails } from "react-icons/fc";
 const DetailsPage = () => {
 
 
@@ -46,21 +46,29 @@ These newly added plants bring freshness and green vibes to your space. Check ou
 
   <div className="space-y-4">
   <div className="flex ">
-    <span className="font-normal min-w-[200px]">Frequency:</span>
+    <span className="font-normal min-w-[100px]  md:min-w-[200px]">Frequency:</span>
     <h1 className="font-bold">{plant.frequency}</h1>
   </div>
   <div className="flex">
-    <span className="font-normal min-w-[200px]">Watering Last Date:</span>
+    <span className="font-normal hidden md:block min-w-[100px]  md:min-w-[200px]"> Watering Last Date:</span>
+    <span className="font-normal min-w-[100px] md:hidden block md:min-w-[200px]"> Last Date:</span>
     <h1 className="font-bold">{plant.lastLate}</h1>
   </div>
   <div className="flex">
-    <span className="font-normal min-w-[200px]">Watering Next Date</span>
+   <span className="font-normal hidden md:block min-w-[100px]  md:min-w-[200px]"> Watering Last Date:</span>
+    <span className="font-normal min-w-[100px] md:hidden block md:min-w-[200px]"> Last Date:</span>
     <h1 className="font-bold">{plant.nextDate} </h1>
   </div>
   <div className="flex">
-    <span className="font-normal min-w-[200px]">Category:</span>
+    <span className="font-normal min-w-[100px]  md:min-w-[200px]">Category:</span>
     <h1 className="font-bold">{plant.category}</h1>
   </div>
+  <div className="flex">
+    <span className="font-normal min-w-[100px]  md:min-w-[200px]">Care Level:</span>
+    <h1 className="font-bold">{plant.careLevel}</h1>
+  </div>
+
+
 </div>
 
     <div>

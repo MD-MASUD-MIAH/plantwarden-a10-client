@@ -1,66 +1,66 @@
 import React from 'react';
-
+import { FaEye } from "react-icons/fa";
+import { useLoaderData } from 'react-router';
+import { Link } from 'react-router';
 const AllPlants = () => {
+
+  const plants = useLoaderData()
+
+  console.log(plants);
+  
     return (
-        <div className='w-11/12 mx-auto overflow-x-auto'>
-            <h1>I  All plants</h1>
-
-
-            <table className='table'>
-
+       <div className="w-11/12 mx-auto py-10 overflow-x-auto">
+  <table className="table table-auto min-w-[800px]">
     <thead>
       <tr>
-        <th>
-          <label>
-         No .
-          </label>
-        </th>
-        <th>Name</th>
-        <th>Job</th>
-        <th>Favorite Color</th>
+        <th>No.</th>
+        <th>Plant Name</th>
+        <th>Category</th>
+        <th>Watering</th>
+        <th>Frequency</th>
         <th></th>
       </tr>
     </thead>
 
-
-    <tbody>
-
-
-         <tr>
-        <th>
-          <label>
-         1
-          </label>
-        </th>
-        <td>
-          <div className="flex items-center gap-3">
-            <div className="avatar">
-              <div className="mask mask-squircle h-12 w-12">
-                <img
-                  src="https://img.daisyui.com/images/profile/demo/2@94.webp"
-                  alt="Avatar Tailwind CSS Component" />
+    {
+      plants.map((plant, index) => (
+        <tbody key={plant._id}>
+          <tr>
+            <th>{index + 1}</th>
+            <td>
+              <div className="flex items-center gap-3">
+                <div className="avatar">
+                  <div className="mask mask-squircle w-12 h-12">
+                    <img src={plant.photo} alt="Plant" />
+                  </div>
+                </div>
+                <div>
+                  <div className="font-bold">{plant.plantName}</div>
+                  <div className="text-sm opacity-50">AD: {plant.addingDate}</div>
+                </div>
               </div>
-            </div>
-            <div>
-              <div className="font-bold">Hart Hagerty</div>
-              <div className="text-sm opacity-50">United States</div>
-            </div>
-          </div>
-        </td>
-        <td>
-          Zemlak, Daniel and Leannon
-          <br />
-          <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
-        </td>
-        <td>Purple</td>
-        <th>
-          <button className="btn btn-ghost btn-xs">details</button>
-        </th>
-      </tr>
-    </tbody>
+            </td>
+            <td>
+              {plant.category}
+              <br />
+              <span className="badge badge-ghost badge-sm">CL: {plant.careLevel}</span>
+            </td>
+            <td>
+              LD: {plant.lastLate}
+              <br />
+              ND: {plant.nextDate}
+            </td>
+            <td>{plant.frequency}</td>
+            <th>
+              <Link to={`/details/${plant._id}`} className="btn btn-ghost btn-xs text-[#2ecc71]">Details</Link>
+            </th>
+          </tr>
+        </tbody>
+      ))
+    }
+  </table>
+</div>
 
-            </table>
-        </div>
     );
 };
 

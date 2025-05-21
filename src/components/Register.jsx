@@ -24,6 +24,54 @@ e.preventDefault()
  console.log(email,password);
  
 
+   if(password.length < 6 ){
+    
+       
+            Swal.fire({
+  icon: "error",
+  title: "Oops...",
+  text: `Length must be at least 6 characte.`,
+
+ 
+});
+
+    
+    return
+    
+        }else if(!/[A-Z]/.test(password)){
+    
+         
+          
+            Swal.fire({
+  icon: "error",
+  title: "Oops...",
+  text: `Must have an Uppercase letter in the password`,
+
+  
+ 
+});
+    return
+
+
+        }else if(!/[a-z]/.test(password)){
+    
+   
+
+
+                Swal.fire({
+  icon: "error",
+  title: "Oops...",
+  text: `Must have a Lowercase letter in the password`,
+ 
+});
+
+
+          return
+
+        } 
+
+
+
  createUser(email,password).then(res=>{
 
 

@@ -29,8 +29,8 @@ Swal.fire({
  logout().then(()=>{
 
  Swal.fire({
-      title: "Deleted!",
-      text: "Your file has been deleted.",
+      title: "Logout!",
+      text: "Logout successfully.",
       icon: "success"
     });
 
