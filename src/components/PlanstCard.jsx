@@ -26,7 +26,7 @@ const PlanstCard = ({data}) => {
   </p>
 
   <p className="font-bold">
-    <span className="font-normal ">Watering:</span>  {data.lastLate}
+    <span className="font-normal "> Last Date: </span>  {data.lastLate}
   </p>
  
 
@@ -35,12 +35,12 @@ const PlanstCard = ({data}) => {
 
   <div>
   <p className="font-bold">
-    <span className="font-normal">CareLevel:</span> {data.careLevel}
+    <span className="font-normal">CareLevel: </span> {data.careLevel}
   </p>
   
 
  <p className="font-bold">
-    <span className="font-normal">Added Date:  </span> {data.addingDate}
+    <span className="font-normal">  Next Date:  </span> {data.nextDate}
   </p>
 
   </div>

@@ -3,6 +3,11 @@ import logo from "../assets/logo1.png";
 import { use } from "react";
 import { AuthContext } from "../contexts/AuthContext";
 import Swal from "sweetalert2";
+import ThemeToggle from "./ThemsToggle";
+import { Tooltip } from 'react-tooltip';
+import 'react-tooltip/dist/react-tooltip.css';
+
+
 const Navbar = () => {
 
   const {user,logout} = use(AuthContext) 
@@ -67,6 +72,7 @@ Swal.fire({
       <NavLink to="/allplans">All Plants</NavLink>
       <NavLink to="/addplnats">Add Plant</NavLink>
       <NavLink to="/myplants">My Plants</NavLink>
+      <ThemeToggle></ThemeToggle>
     </>
   );
   return (
@@ -119,12 +125,13 @@ user ?<div className="flex gap-4 justify-center items-center">
 
   <div className="group relative flex items-center">
   
-  <span className="absolute right-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-800 text-white text-sm px-3 py-1 rounded-md whitespace-nowrap z-10">
-    {user?.displayName || "Please Enter Name"}
-  </span>
-
- 
- {
+  
+       <div className="relative inline-block">
+      <div
+        data-tooltip-id="user-tooltip"
+        data-tooltip-content={user?.displayName || "Please Enter Name"}
+      >
+{
 
   user &&  <img
   className="rounded-full  h-8 w-8 md:w-[50px] md:h-[50px] cursor-pointer"
@@ -132,11 +139,40 @@ user ?<div className="flex gap-4 justify-center items-center">
   alt="User"
 />
  }
+      
+      </div>
+
+      <Tooltip id="user-tooltip" className="z-10" place="left" />
+    </div>
+
+ 
+ 
 </div>
 <button onClick={handleLogout} className="btn bg-[#2ecc71] hover:bg-[#27ae60] text-white font-semibold py-2 px-5  shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">  Logout</button>
 
-</div> : <div className="flex gap-4">    <Link to='/login' className="btn bg-[#2ecc71] hover:bg-[#27ae60] text-white font-semibold py-2 px-5  shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">Login</Link>
-          <Link to='/register' className="btn bg-[#2ecc71] hover:bg-[#27ae60] text-white font-semibold py-2 px-5  shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">Register</Link></div>
+</div> :  <div className="flex gap-4">
+      <Link
+        to="/login"
+        data-tooltip-id="login-tooltip"
+        data-tooltip-content="Please Login"
+        className="btn bg-[#2ecc71] hover:bg-[#27ae60] text-white font-semibold py-2 px-5 shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
+      >
+        Login
+      </Link>
+
+      <Link
+        to="/register"
+        data-tooltip-id="register-tooltip"
+        data-tooltip-content="Please Register"
+        className="btn bg-[#2ecc71] hover:bg-[#27ae60] text-white font-semibold py-2 px-5 shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
+      >
+        Register
+      </Link>
+
+      {/* Tooltip components */}
+      <Tooltip id="login-tooltip" place="left" />
+      <Tooltip id="register-tooltip" place="right" />
+    </div>
  
       }
         </div>

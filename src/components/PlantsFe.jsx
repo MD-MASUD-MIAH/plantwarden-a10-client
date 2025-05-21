@@ -20,8 +20,8 @@ const PlantsFe = () => {
      
  <div className="space-y-4 md:w-[50%]">
         <p className="text-[#2ecc71] font-semibold"> Make it easy.</p>
-        <h2 className="text-3xl font-bold text-gray-800">Helping Your Plants Grow Strong</h2>
-        <p className="text-gray-600">
+        <h2 className="text-3xl font-bold ">Helping Your Plants Grow Strong</h2>
+        <p className="text-gray-400">
        “We are here to help your plants grow healthy and strong with simple and practical advice. Whether it’s reminding you when to water, how to fertilize, or protect from pests, we guide you every step of the way. With easy-to-follow tips and useful tools, taking care of your plants becomes fun and stress-free. Watch your plants thrive and flourish like never before!”
 
 

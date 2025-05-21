@@ -1,12 +1,13 @@
 import React from 'react';
 import { FaEye } from "react-icons/fa";
-import { useLoaderData } from 'react-router';
+import { useLoaderData } from 'react-router'; 
 import { Link } from 'react-router';
+
 const AllPlants = () => {
 
-  const plants = useLoaderData()
+  const plants= useLoaderData() 
 
-  console.log(plants);
+  
   
     return (
        <div className="w-11/12 mx-auto py-10 overflow-x-auto">
@@ -16,7 +17,7 @@ const AllPlants = () => {
         <th>No.</th>
         <th>Plant Name</th>
         <th>Category</th>
-        <th>Watering</th>
+        <th>Watering Next Date</th>
         <th>Frequency</th>
         <th></th>
       </tr>
@@ -46,9 +47,8 @@ const AllPlants = () => {
               <span className="badge badge-ghost badge-sm">CL: {plant.careLevel}</span>
             </td>
             <td>
-              LD: {plant.lastLate}
-              <br />
-              ND: {plant.nextDate}
+           
+            {plant.nextDate}
             </td>
             <td>{plant.frequency}</td>
             <th>
