@@ -1,10 +1,11 @@
 import React, { use, useState } from 'react';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../contexts/AuthContext';
+import { useNavigate } from 'react-router';
 
 
 const Addplants = () => {
-
+ const navigate = useNavigate()
   const bdTime = new Date(Date.now() + 6 * 60 * 60 * 1000); 
 const today = bdTime.toISOString().split("T")[0];
 const [date, setDate] = useState(today);
@@ -41,6 +42,8 @@ const [date, setDate] = useState(today);
    draggable: true
  });
             console.log('after add',data);
+
+            navigate('/myplants')
             
          })
          

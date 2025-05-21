@@ -45,9 +45,9 @@ const Banner = () => {
           /> 
 
          <div className=" justify-center items-center">
-         <h1 className=" absolute top-1/2 md:top-1/3 left-1/2 transform -translate-x-1/2 lg:w-250 -translate-y-1/2 md:text-2xl lg:text-5xl font-extrabold text-center   ">{slide.title}</h1> 
+         <h1 className=" absolute top-1/2 md:top-1/3 left-1/2 transform -translate-x-1/2 lg:w-250 -translate-y-1/2 md:text-2xl lg:text-5xl font-extrabold text-center text-white  ">{slide.title}</h1> 
 
-         <p className="absolute top-1/3 md:top-11/16 lg:top-11/25 hidden md:block  left-1/2 transform -translate-x-1/2  -translate-y-1/2 text-xl  text-center ">{slide.description}</p>
+         <p className="absolute top-1/3 md:top-11/16 lg:top-11/25 hidden md:block  left-1/2 transform -translate-x-1/2  -translate-y-1/2 text-xl text-gray-200  text-center ">{slide.description}</p>
          </div>
         </SwiperSlide>
       ))}

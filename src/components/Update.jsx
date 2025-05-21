@@ -1,17 +1,50 @@
-import React, { use } from 'react';
 
-import { AuthContext } from '../contexts/AuthContext';
-import { useLoaderData } from 'react-router';
+import { useLoaderData, useNavigate } from 'react-router';
+import Swal from 'sweetalert2';
 
 const Update = () => {
  
-    const {user} = use(AuthContext)
+   const navigate =  useNavigate() 
 
     const updatePlant = useLoaderData()
 
-    const handleUpdate = ()=>{
+    const handleUpdate = (e)=>{
 
-     console.log('update');
+        e.preventDefault()
+
+     console.log('update'); 
+     const frm = e.target 
+
+     const plant = new FormData(frm) 
+
+     const plants =  Object.fromEntries(plant.entries()) 
+
+     console.log(plants);
+
+
+     fetch(`http://localhost:4000/plants/${updatePlant._id}`,{
+
+        method:'PUT',
+        headers:{
+
+            'content-type' : 'application/json'
+        },
+
+        body:JSON.stringify(plants)
+     }).then(res=>res.json()).then(data=>{
+
+        console.log('update data',data);
+
+          Swal.fire({
+          title: " Update Successfully!",
+          icon: "success",
+          draggable: true,
+           timer:1500
+        
+        });
+         navigate('/myplants')
+     })
+     
      
     }
     return (
@@ -73,15 +106,8 @@ const Update = () => {
           <input name='healthStatus' defaultValue={updatePlant.healthStatus} type="text" placeholder=" Healthy, Wilting" className="input input-bordered w-full" />
         </div>
 
-        <div>
-          <label className="block text-sm font-medium mb-1">User Email</label>
-          <input type="email" name='email' value={user.email} className="input input-bordered w-full" />
-        </div>
+       
 
-        <div>
-          <label className="block text-sm font-medium mb-1">User Name</label>
-          <input name='name' value={user.displayName} type="text"  className="input input-bordered w-full" />
-        </div>
 
          <div>
           <label className="block text-sm font-medium mb-1">Description</label>
