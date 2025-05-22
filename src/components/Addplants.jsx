@@ -2,8 +2,11 @@ import { use, useState } from "react";
 import { useNavigate } from "react-router";
 import Swal from "sweetalert2";
 import { AuthContext } from "../contexts/AuthContext";
+import { TitleUse } from "./title";
 
 const Addplants = () => {
+
+  TitleUse('Add Plants')
   const navigate = useNavigate();
   const bdTime = new Date(Date.now() + 6 * 60 * 60 * 1000);
   const today = bdTime.toISOString().split("T")[0];

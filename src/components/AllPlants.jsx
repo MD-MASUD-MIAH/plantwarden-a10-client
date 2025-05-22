@@ -1,8 +1,11 @@
 import { use, useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router";
 import { AuthContext } from "../contexts/AuthContext";
+import { TitleUse } from "./title";
 
 const AllPlants = () => {
+
+  TitleUse('All Plants')
   const plants = useLoaderData();
 
   const { sort, setSort } = use(AuthContext);

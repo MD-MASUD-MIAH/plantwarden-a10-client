@@ -3,7 +3,11 @@ import { FaEdit, FaTrash } from "react-icons/fa";
 import { Link, useLoaderData } from "react-router";
 import Swal from "sweetalert2";
 import { AuthContext } from "../contexts/AuthContext";
+import { TitleUse } from "./title";
 const Myplant = () => {
+
+
+  TitleUse('My Plants')
   const { user } = use(AuthContext);
 
   const data = useLoaderData();

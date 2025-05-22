@@ -5,8 +5,10 @@ import { useLoaderData } from 'react-router';
 import PlantsFe from './PlantsFe';
 import PlantCareTips from './PlantCareTips';
 import MyLottie from './MyLottie';
+import { TitleUse } from './title';
 
 const Home = () => {
+    TitleUse('Home')
     
      const plants = useLoaderData()
 

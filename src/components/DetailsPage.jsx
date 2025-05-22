@@ -1,9 +1,10 @@
 import React from 'react';
 import { useLoaderData } from 'react-router';
 import { FcViewDetails } from "react-icons/fc";
+import { TitleUse } from './title';
 const DetailsPage = () => {
 
-
+      TitleUse('Details')
     const plant = useLoaderData() 
 
   

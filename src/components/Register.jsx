@@ -2,7 +2,9 @@ import React, { use } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../contexts/AuthContext';
 import Swal from 'sweetalert2';
+import { TitleUse } from './title';
 const Register = () => {
+  TitleUse('Register')
 
   const location = useLocation() 
   const navigate = useNavigate()

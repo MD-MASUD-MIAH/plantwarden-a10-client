@@ -1,6 +1,9 @@
 import { Link } from "react-router";
+import { TitleUse } from "./title";
 
 const ErrorPage = () => {
+
+  TitleUse('Error')
   return (
      <div className="min-h-screen flex flex-col items-center justify-center bg-[#f3f4f6] text-center px-4">
       <img
