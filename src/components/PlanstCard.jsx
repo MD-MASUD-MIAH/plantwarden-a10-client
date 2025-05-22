@@ -9,7 +9,7 @@ const PlanstCard = ({data}) => {
     
     
     return (
-        <div className="card bg-base-100  shadow-sm "> 
+        <div className="card bg-base-100 border border-[#2ecc71] shadow-sm overflow-hidden transform transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-lg"> 
        
         <figure>
           <img className='h-[250px] w-full'

@@ -22,7 +22,7 @@ const AllPlants = () => {
 
   return (
     <div className="w-11/12 mx-auto py-10 overflow-x-auto">
-      <table className="table table-auto min-w-[800px]">
+      <table className="table  table-auto min-w-[800px] ">
         <thead>
           <tr>
             <th>No.</th>
@@ -44,7 +44,7 @@ const AllPlants = () => {
         </thead>
 
         {tree?.slice()?.reverse()?.map((plant, index) => (
-            <tbody key={plant._id}>
+            <tbody className="" key={plant._id}>
               <tr>
                 <th>{index + 1}</th>
                 <td>
