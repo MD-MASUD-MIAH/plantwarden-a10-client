@@ -3,7 +3,7 @@ import { AuthContext } from "../contexts/AuthContext";
 import PlanstCard from "./PlanstCard";
 
 const Newplants = ({ plants }) => {
-  const [tree, setTree] = useState(plants);
+  const [tree, setTree] = useState(plants || []);
 
   const { sort } = use(AuthContext);
 
@@ -11,9 +11,14 @@ const Newplants = ({ plants }) => {
     fetch(`https://plantwarden-b11a10-server.vercel.app/plants?sortBy=${sort}`)
       .then((res) => res.json())
       .then((data) => {
-        setTree(data);
+
+        console.log(data);
+        
+        setTree(data || []);
       });
   }, [sort, setTree]);
+
+
 
   return (
     <div>
@@ -34,7 +39,7 @@ const Newplants = ({ plants }) => {
       </div>
 
       <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-3 md:gap-20 py-10">
-        {tree.slice(0, 6).map((data) => (
+        {tree?.slice(0, 6)?.map((data) => (
           <PlanstCard key={data._id} data={data}></PlanstCard>
         ))}
       </div>

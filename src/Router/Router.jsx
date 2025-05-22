@@ -20,7 +20,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-
+        path: "/",
         loader: () =>
           fetch("https://plantwarden-b11a10-server.vercel.app/plants"),
         hydrateFallbackElement: <Loader></Loader>,

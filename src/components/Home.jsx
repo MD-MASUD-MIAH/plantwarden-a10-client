@@ -10,14 +10,14 @@ import { TitleUse } from './title';
 const Home = () => {
     TitleUse('Home')
     
-     const plants = useLoaderData()
+     const plants = useLoaderData() 
 
     return (
         <div> 
-            <Banner></Banner>
-           <Newplants plants={plants}></Newplants>
+            <Banner></Banner> 
+           <Newplants plants={plants}></Newplants> 
         
-           <PlantCareTips></PlantCareTips>
+           <PlantCareTips></PlantCareTips> 
            <PlantsFe></PlantsFe>
         </div>
     );

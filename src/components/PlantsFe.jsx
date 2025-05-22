@@ -1,5 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion'; 
+
+import { Motion } from 'framer-motion';
+
 const PlantsFe = () => {
     return (
         <div className='py-10 md:py-20'>
@@ -32,7 +34,7 @@ const PlantsFe = () => {
      
 
  <div className="relative group">
-        <motion.img 
+        <Motion.img 
          initial={{ scale: 1 }}
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.5 }}
@@ -40,16 +42,16 @@ const PlantsFe = () => {
           alt="Vases"
           className="w-full rounded-lg shadow-lg"
         
-        ></motion.img>
+        ></Motion.img>
 
-        <motion.img
+        <Motion.img
           initial={{ scale: 1 }}
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.5 }}
           src="https://i.ibb.co/Tx4ZXQ1Z/Outdoor-Fiddle-Leaf-Fig-1024x768-1.jpg"
           alt="Vase with Flower"
           className="absolute left-1/2 top-1/2 w-2/3 transform -translate-x-1/2 translate-y-10 z-10 rounded-lg shadow-xl"
-        > </motion.img>
+        > </Motion.img>
       </div>
 
     </div>

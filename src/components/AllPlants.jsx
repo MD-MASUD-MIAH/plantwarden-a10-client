@@ -43,10 +43,7 @@ const AllPlants = () => {
           </tr>
         </thead>
 
-        {tree
-          .slice()
-          .reverse()
-          .map((plant, index) => (
+        {tree?.slice()?.reverse()?.map((plant, index) => (
             <tbody key={plant._id}>
               <tr>
                 <th>{index + 1}</th>

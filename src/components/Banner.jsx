@@ -36,7 +36,7 @@ const Banner = () => {
        
       }}
     >
-      {slides.map((slide) => (
+      {slides?.map((slide) => (
         <SwiperSlide key={slide.image_url}>
           <img 
             src={slide.image_url} 
