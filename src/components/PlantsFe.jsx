@@ -1,63 +1,55 @@
-import React from 'react';
-
-
+import React from "react";
 
 const PlantsFe = () => {
-    return (
-        <div className='py-10 md:py-20'>
+  return (
+    <div className="py-10 md:py-20">
+      <div>
+        <h1 className="text-center pt-10 text-4xl font-bold">
+          Better Plant Care, Made Simple
+        </h1>
 
-            <div className=''>
-
-<h1 className='text-center pt-10 text-4xl font-bold'>Better Plant Care, Made Simple</h1> 
-
-
-<p className='text-center text-xs py-4 text-gray-400'>Taking care of your plants has never been easier. Our system helps you monitor your plants’ health,
-
-<br /> watering schedule, fertilizing, and other care tasks with simple, timely reminders and easy-to-follow guidance.
-</p>
-</div>
-
-              <div className="w-11/12 mx-auto pb-10 md:pb-50 mt-12 px-4 flex flex-col-reverse md:flex-row gap-35 md:gap-10 items-center">
-      {/* Left Image Section */}
-     
- <div className="space-y-4 md:w-[50%]">
-        <p className="text-[#2ecc71] font-semibold"> Make it easy.</p>
-        <h2 className="text-3xl font-bold ">Helping Your Plants Grow Strong</h2>
-        <p className="text-gray-400">
-       “We are here to help your plants grow healthy and strong with simple and practical advice. Whether it’s reminding you when to water, how to fertilize, or protect from pests, we guide you every step of the way. With easy-to-follow tips and useful tools, taking care of your plants becomes fun and stress-free. Watch your plants thrive and flourish like never before!”
-
-
+        <p className="text-center text-xs py-4 text-gray-400">
+          Taking care of your plants has never been easier. Our system helps you
+          monitor your plants’ health,
+          <br /> watering schedule, fertilizing, and other care tasks with
+          simple, timely reminders and easy-to-follow guidance.
         </p>
-      
-      </div>
-      {/* Right Text Section */}
-     
-
- <div className="relative group">
-        <img 
-         initial={{ scale: 1 }}
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.5 }}
-          src="https://i.ibb.co/60pYZSmP/90912360.jpg"
-          alt="Vases"
-          className="w-full rounded-lg shadow-lg transition-transform duration-500 ease-in-out hover:scale-105"
-        
-        ></img>
-
-        <img
-          initial={{ scale: 1 }}
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.5 }}
-          src="https://i.ibb.co/Tx4ZXQ1Z/Outdoor-Fiddle-Leaf-Fig-1024x768-1.jpg"
-          alt="Vase with Flower"
-          className="absolute left-1/2 top-1/2 w-2/3 transform -translate-x-1/2 translate-y-10 z-10 rounded-lg shadow-xl transition-transform duration-500 ease-in-out hover:scale-105"
-        > </img>
       </div>
 
-    </div>
-            
+      <div className="w-11/12 mx-auto pb-10 md:pb-50 mt-12 px-4 flex flex-col-reverse md:flex-row gap-9 md:gap-10 items-center">
+        {/* Left Text Section */}
+        <div className="space-y-4 md:w-[50%]">
+          <p className="text-[#2ecc71] font-semibold">Make it easy.</p>
+          <h2 className="text-3xl font-bold">Helping Your Plants Grow Strong</h2>
+          <p className="text-gray-400">
+            “We are here to help your plants grow healthy and strong with simple
+            and practical advice. Whether it’s reminding you when to water, how
+            to fertilize, or protect from pests, we guide you every step of the
+            way. With easy-to-follow tips and useful tools, taking care of your
+            plants becomes fun and stress-free. Watch your plants thrive and
+            flourish like never before!”
+          </p>
         </div>
-    );
+
+        {/* Right Image Section */}
+        <div className="relative group md:w-[50%] md:py-0 py-20">
+          <img
+            src="https://i.ibb.co/60pYZSmP/90912360.jpg"
+            alt="Vases"
+            className="w-full rounded-lg shadow-lg transition-transform duration-500 ease-in-out hover:scale-105"
+          />
+
+          <img
+            src="https://i.ibb.co/Tx4ZXQ1Z/Outdoor-Fiddle-Leaf-Fig-1024x768-1.jpg"
+            alt="Vase with Flower"
+            className="absolute left-1/2 top-1/2 w-2/3 rounded-lg shadow-xl
+              transform -translate-x-1/2 translate-y-10 z-10
+              transition-transform duration-500 ease-in-out hover:scale-105"
+          />
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default PlantsFe;
