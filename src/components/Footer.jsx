@@ -16,7 +16,7 @@ const Footer = () => {
         <a class="link link-hover">Privacy policy</a>
 
         <a class="link link-hover">Cookie policy</a>
-        <a class="link link-hover">Help Desk</a>
+        <a class="link link-hover">Plant Desk</a>
       </div>
 
 

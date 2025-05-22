@@ -83,7 +83,7 @@ e.preventDefault()
             setUser({ ...user, displayName: name, photoURL: photo });
 
              Swal.fire({
-              title: " Login Successfully!",
+              title: " Register Successfully!",
               icon: "success",
               draggable: true
             });
