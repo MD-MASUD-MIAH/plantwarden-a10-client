@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Motion } from 'framer-motion';
+
 
 const PlantsFe = () => {
     return (
@@ -34,24 +34,24 @@ const PlantsFe = () => {
      
 
  <div className="relative group">
-        <Motion.img 
+        <img 
          initial={{ scale: 1 }}
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.5 }}
           src="https://i.ibb.co/60pYZSmP/90912360.jpg"
           alt="Vases"
-          className="w-full rounded-lg shadow-lg"
+          className="w-full rounded-lg shadow-lg transition-transform duration-500 ease-in-out hover:scale-105"
         
-        ></Motion.img>
+        ></img>
 
-        <Motion.img
+        <img
           initial={{ scale: 1 }}
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.5 }}
           src="https://i.ibb.co/Tx4ZXQ1Z/Outdoor-Fiddle-Leaf-Fig-1024x768-1.jpg"
           alt="Vase with Flower"
-          className="absolute left-1/2 top-1/2 w-2/3 transform -translate-x-1/2 translate-y-10 z-10 rounded-lg shadow-xl"
-        > </Motion.img>
+          className="absolute left-1/2 top-1/2 w-2/3 transform -translate-x-1/2 translate-y-10 z-10 rounded-lg shadow-xl transition-transform duration-500 ease-in-out hover:scale-105"
+        > </img>
       </div>
 
     </div>
