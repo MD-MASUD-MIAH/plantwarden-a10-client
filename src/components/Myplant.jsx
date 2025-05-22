@@ -31,7 +31,7 @@ const Myplant = () => {
 
               setPlants(remaing);
             }
-            console.log("after delete data ", data);
+            
 
             Swal.fire({
               title: "Deleted!",

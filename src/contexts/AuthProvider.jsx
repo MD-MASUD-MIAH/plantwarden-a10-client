@@ -6,7 +6,7 @@ import { auth } from '../Firebase/firebase.init';
 const AuthProvider = ({children}) => {
 const [user, setUser] = useState(null);
  const [loading, setLoading] = useState(true);
-console.log(user);
+
 
 const logout = () => {
     setLoading(true)

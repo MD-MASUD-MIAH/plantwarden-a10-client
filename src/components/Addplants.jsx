@@ -22,7 +22,7 @@ const [date, setDate] = useState(today);
          const newPants = new FormData(fmr) 
          const addNew = Object.fromEntries(newPants.entries()) 
 
-         console.log(addNew);
+       
 
 
          fetch('http://localhost:4000/plants',{

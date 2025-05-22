@@ -12,14 +12,14 @@ const Update = () => {
 
         e.preventDefault()
 
-     console.log('update'); 
+     
      const frm = e.target 
 
      const plant = new FormData(frm) 
 
      const plants =  Object.fromEntries(plant.entries()) 
 
-     console.log(plants);
+     
 
 
      fetch(`http://localhost:4000/plants/${updatePlant._id}`,{

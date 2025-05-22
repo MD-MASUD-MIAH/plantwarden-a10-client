@@ -6,7 +6,7 @@ const DetailsPage = () => {
 
     const plant = useLoaderData() 
 
-    console.log(plant);
+  
     
     return (
         

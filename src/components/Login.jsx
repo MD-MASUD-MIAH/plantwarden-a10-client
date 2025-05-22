@@ -34,7 +34,7 @@ const navigate =  useNavigate()
       
     }).catch(error=>{
 
-      console.log(error.message);
+     
 
       Swal.fire({
   icon: "error",

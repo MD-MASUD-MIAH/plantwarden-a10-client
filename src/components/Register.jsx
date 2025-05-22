@@ -21,7 +21,7 @@ e.preventDefault()
  const name = newUser.get('name') 
  const photo = newUser.get('photo') 
 
- console.log(email,password);
+ 
  
 
    if(password.length < 6 ){
@@ -91,6 +91,7 @@ navigate(location.state ? location.state : '/');
 
         }).catch(error => {
             console.log(error);
+            
             setUser(user);  
 
                Swal.fire({
