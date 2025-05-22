@@ -21,7 +21,7 @@ const Myplant = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:4000/plants/${id}`, {
+        fetch(`https://plantwarden-b11a10-server.vercel.app/plants/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -31,7 +31,6 @@ const Myplant = () => {
 
               setPlants(remaing);
             }
-            
 
             Swal.fire({
               title: "Deleted!",
@@ -48,18 +47,18 @@ const Myplant = () => {
 
   return (
     <div className="w-11/12 mx-auto">
+      <div className="text-center pt-10">
+        <h1 className="text-4xl font-bold inline-block text-gray-800">
+          My Plants
+        </h1>
 
-     <div className="text-center pt-10">
-  <h1 className="text-4xl font-bold inline-block text-gray-800">My Plants</h1>
-  
-  <div className="mt-3 flex flex-col items-center space-y-1">
-    <span className="w-28 h-[3px] rounded-full bg-[#2ecc71] shadow-md"></span>
-    <span className="w-16 h-[2px] rounded-full bg-[#2ecc71] shadow-sm"></span>
-  </div>
-</div>
+        <div className="mt-3 flex flex-col items-center space-y-1">
+          <span className="w-28 h-[3px] rounded-full bg-[#2ecc71] shadow-md"></span>
+          <span className="w-16 h-[2px] rounded-full bg-[#2ecc71] shadow-sm"></span>
+        </div>
+      </div>
 
-
-      {plants.length ? 
+      {plants.length ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-10 py-10 ">
           {plants.map((res) => (
             <div
@@ -103,26 +102,24 @@ const Myplant = () => {
             </div>
           ))}
         </div>
-       : 
-   <div className="h-[calc(100vh-300px)]  flex items-center justify-center px-4">
-  <div className="text-center py-10">
-    <h1 className="text-2xl font-semibold text-gray-700 mb-4">
-      You haven’t added any plants yet!
-    </h1>
-    <p className="text-gray-500 mb-6">
-      Start building your green space by adding your first plant.
-    </p>
-    <Link
-      to="/addplnats"
-      className="inline-block bg-[#2ecc71] hover:bg-[#27ae60] text-white font-medium py-2 px-5 rounded-md shadow-md hover:shadow-lg transition-all duration-300 ease-in-out"
-    >
-      Add a Plant Now
-    </Link>
-  </div>
-</div>
-
-
-      }
+      ) : (
+        <div className="h-[calc(100vh-300px)]  flex items-center justify-center px-4">
+          <div className="text-center py-10">
+            <h1 className="text-2xl font-semibold text-gray-700 mb-4">
+              You haven’t added any plants yet!
+            </h1>
+            <p className="text-gray-500 mb-6">
+              Start building your green space by adding your first plant.
+            </p>
+            <Link
+              to="/addplnats"
+              className="inline-block bg-[#2ecc71] hover:bg-[#27ae60] text-white font-medium py-2 px-5 rounded-md shadow-md hover:shadow-lg transition-all duration-300 ease-in-out"
+            >
+              Add a Plant Now
+            </Link>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -1,81 +1,97 @@
-import React, { use, useEffect, useState } from 'react';
-import { FaEye } from "react-icons/fa";
-import {  useLoaderData } from 'react-router'; 
-import { Link } from 'react-router';
-import { AuthContext } from '../contexts/AuthContext';
+import { use, useEffect, useState } from "react";
+import { Link, useLoaderData } from "react-router";
+import { AuthContext } from "../contexts/AuthContext";
 
 const AllPlants = () => {
+  const plants = useLoaderData();
 
-  const plants = useLoaderData()
+  const { sort, setSort } = use(AuthContext);
 
-  const {sort, setSort} = use(AuthContext)
-  
-  const [tree,setTree] = useState(plants)
- 
+  const [tree, setTree] = useState(plants);
 
-useEffect(() => {
-  fetch(`http://localhost:4000/plants?sortBy=${sort}`)
-    .then(res => res.json())
-    .then(data => {
-    setTree(data)
+  useEffect(() => {
+    fetch(`https://plantwarden-b11a10-server.vercel.app/plants?sortBy=${sort}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setTree(data);
+      });
+  }, [sort, setTree]);
 
-    
-    });
-}, [sort,setTree]);
-
-  
-    return (
-       <div className="w-11/12 mx-auto py-10 overflow-x-auto">
-  <table className="table table-auto min-w-[800px]">
-    <thead>
-      <tr>
-        <th>No.</th>
-        <th>Plant Name</th>
-        <th>Category</th>
-        <th>{sort?'Watering Next Date ':'Watering'}<button className='btn ml-4  text-white text-xs bg-[#2ecc71]' onClick={()=>setSort(!sort)} > {sort ?"unsort":'sort'}</button></th>
-        <th>Frequency</th>
-        <th></th>
-      </tr>
-    </thead>
-
-    {
-      tree.slice().reverse().map((plant, index) => (
-        <tbody key={plant._id}>
+  return (
+    <div className="w-11/12 mx-auto py-10 overflow-x-auto">
+      <table className="table table-auto min-w-[800px]">
+        <thead>
           <tr>
-            <th>{index + 1}</th>
-            <td>
-              <div className="flex items-center gap-3">
-                <div className="avatar">
-                  <div className="mask mask-squircle w-12 h-12">
-                    <img src={plant.photo} alt="Plant" />
-                  </div>
-                </div>
-                <div>
-                  <div className="font-bold">{plant.plantName}</div>
-                  <div className="text-sm opacity-50">AD: {plant.addingDate}</div>
-                </div>
-              </div>
-            </td>
-            <td>
-              {plant.category}
-              <br />
-              <span className="badge badge-ghost badge-sm">CL: {plant.careLevel}</span>
-            </td>
-           {
-            sort?<td>   {plant.nextDate}</td> : <td> LD : {plant.lastLate} <br /> ND : {plant.nextDate} </td>
-           }
-            <td>{plant.frequency}</td>
+            <th>No.</th>
+            <th>Plant Name</th>
+            <th>Category</th>
             <th>
-              <Link to={`/details/${plant._id}`} className="btn btn-ghost btn-xs text-[#2ecc71]">Details</Link>
+              {sort ? "Watering Next Date " : "Watering"}
+              <button
+                className="btn ml-4  text-white text-xs bg-[#2ecc71]"
+                onClick={() => setSort(!sort)}
+              >
+                {" "}
+                {sort ? "unsort" : "sort"}
+              </button>
             </th>
+            <th>Frequency</th>
+            <th></th>
           </tr>
-        </tbody>
-      ))
-    }
-  </table>
-</div>
+        </thead>
 
-    );
+        {tree
+          .slice()
+          .reverse()
+          .map((plant, index) => (
+            <tbody key={plant._id}>
+              <tr>
+                <th>{index + 1}</th>
+                <td>
+                  <div className="flex items-center gap-3">
+                    <div className="avatar">
+                      <div className="mask mask-squircle w-12 h-12">
+                        <img src={plant.photo} alt="Plant" />
+                      </div>
+                    </div>
+                    <div>
+                      <div className="font-bold">{plant.plantName}</div>
+                      <div className="text-sm opacity-50">
+                        AD: {plant.addingDate}
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  {plant.category}
+                  <br />
+                  <span className="badge badge-ghost badge-sm">
+                    CL: {plant.careLevel}
+                  </span>
+                </td>
+                {sort ? (
+                  <td> {plant.nextDate}</td>
+                ) : (
+                  <td>
+                    {" "}
+                    LD : {plant.lastLate} <br /> ND : {plant.nextDate}{" "}
+                  </td>
+                )}
+                <td>{plant.frequency}</td>
+                <th>
+                  <Link
+                    to={`/details/${plant._id}`}
+                    className="btn btn-ghost btn-xs text-[#2ecc71]"
+                  >
+                    Details
+                  </Link>
+                </th>
+              </tr>
+            </tbody>
+          ))}
+      </table>
+    </div>
+  );
 };
 
 export default AllPlants;
