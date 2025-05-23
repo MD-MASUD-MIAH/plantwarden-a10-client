@@ -9,7 +9,7 @@ const Root = () => {
 const navigate = useNavigation()
 
     return (
-        <div className='min-h-screen flex flex-col'>
+        <div className='overflow-x-hidden flex flex-col'>
 
             <Navbar></Navbar>
            

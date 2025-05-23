@@ -22,7 +22,7 @@ const PlantCareTips = () => {
  
   <div className="md:w-1/2 text-center md:text-left">
     <h2 className="text-green-600 text-lg font-medium">Welcome</h2>
-    <h1 className="text-3xl font-bold mt-2 mb-4">Simple Plant Care Tips</h1>
+    <h1 className="text-3xl font-bold mt-2 mb-4 sylefont ">Simple Plant Care Tips</h1>
     <p className="text-gray-600 text-xs mb-6 md:w-[50%]">
       Taking care of your plants doesn't have to be complicated. With a few easy tips, you can help them thrive year-round. From proper watering to giving them the right sunlight,
     </p>

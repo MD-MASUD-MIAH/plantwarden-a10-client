@@ -7,7 +7,9 @@ const AuthProvider = ({children}) => {
 const [user, setUser] = useState(null);
  const [loading, setLoading] = useState(true);
 
-
+ const [isDark, setIsDark] = useState(
+    localStorage.getItem("theme") === "dark"
+  );
 const logout = () => {
     setLoading(true)
     return signOut(auth);
@@ -69,7 +71,8 @@ const logout = () => {
   user,
   logout,
   googleLogin,
-  sort, setSort
+  sort, setSort,
+  isDark, setIsDark
     }
     return (
        <AuthContext value={userInfo}>

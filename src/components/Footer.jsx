@@ -8,7 +8,7 @@ const Footer = () => {
     >
       <div className="  flex font-bold items-center gap-3 md:text-xl mr-7 ">
         <img className={`w-18  " `} src={logo} alt="" />{" "}
-        <p className="md:mt-4"> PlantWarden</p>
+        <p className="md:mt-4 sylefont"> PlantWarden</p>
       </div>
 
       <div className="flex gap-1 md:gap-10 border-b md:px-10 py-4 text-xs ">

@@ -52,7 +52,7 @@ const Myplant = () => {
   return (
     <div className="w-11/12 mx-auto">
       <div className="text-center pt-10">
-        <h1 className="text-4xl font-bold inline-block text-gray-800">
+        <h1 className="text-4xl font-bold inline-block text-gray-800 sylefont">
           My Plants
         </h1>
 

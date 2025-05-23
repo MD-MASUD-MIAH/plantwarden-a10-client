@@ -44,7 +44,7 @@ const Addplants = () => {
   return (
     <div className=" w-11/12 mx-auto py-10">
       <div className="md:max-w-5xl mx-auto border border-[#2ecc71] rounded p-6 shadow bg-white">
-        <h2 className="text-3xl font-bold text-gray-800 mb-6">Add New Plant</h2>
+        <h2 className="text-3xl font-bold text-gray-800 mb-6 sylefont">Add New Plant</h2>
         <form
           onSubmit={handleaddPlants}
           className="grid grid-cols-1 md:grid-cols-2 gap-6"

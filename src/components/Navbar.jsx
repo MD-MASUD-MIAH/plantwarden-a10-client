@@ -107,7 +107,7 @@ Swal.fire({
           <div className="flex gap-3 items-center    ">
             <img className="w-15 h-15 " src={logo} alt="" />
 
-            <h1 className="hidden md:block text-[#2ecc71] font-bold text-3xl ">
+            <h1 className="hidden md:block text-[#2ecc71] font-bold text-3xl sylefont ">
               {" "}
               PlantWarden
             </h1>

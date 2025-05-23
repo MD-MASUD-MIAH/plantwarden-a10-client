@@ -55,7 +55,7 @@ const AllPlants = () => {
                       </div>
                     </div>
                     <div>
-                      <div className="font-bold">{plant.plantName}</div>
+                      <div className="font-bold text-xl sylefont">{plant.plantName}</div>
                       <div className="text-sm opacity-50">
                         AD: {plant.addingDate}
                       </div>
@@ -77,7 +77,7 @@ const AllPlants = () => {
                     LD : {plant.lastLate} <br /> ND : {plant.nextDate}{" "}
                   </td>
                 )}
-                <td>{plant.frequency}</td>
+                <td className="sylefont text-xl">{plant.frequency}</td>
                 <th>
                   <Link
                     to={`/details/${plant._id}`}

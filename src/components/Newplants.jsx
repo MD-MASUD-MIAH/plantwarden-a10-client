@@ -23,7 +23,7 @@ const Newplants = ({ plants }) => {
   return (
     <div>
       <div className="my-12">
-        <h1 className="text-center pt-10 text-4xl font-bold">
+        <h1 className="text-center pt-10 text-4xl font-bold sylefont">
           Your New Plant Buddies
         </h1>
 

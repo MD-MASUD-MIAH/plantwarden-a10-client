@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react";
+import { use, useEffect,  } from "react";
+import { AuthContext } from "../contexts/AuthContext";
 
 const ThemeToggle = () => {
-  const [isDark, setIsDark] = useState(
-    localStorage.getItem("theme") === "dark"
-  );
+  const {isDark, setIsDark} = use(AuthContext)
 
   useEffect(() => {
     const theme = isDark ? "dark" : "light";

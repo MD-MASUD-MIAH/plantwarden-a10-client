@@ -15,7 +15,7 @@ const DetailsPage = () => {
           
  <div className=''>
 
-<h1 className='text-center pt-10 text-4xl font-bold'>Meet Our New Plant</h1> 
+<h1 className='text-center pt-10 text-4xl sylefont font-bold'>Meet Our New Plant</h1> 
 
 
 <p className='text-center text-xs py-4 text-gray-400'>Thought for a couple of seconds
@@ -38,7 +38,7 @@ These newly added plants bring freshness and green vibes to your space. Check ou
 
 
          <div className='flex flex-col gap-5'>
-         <h1 className='font-bold text-2xl'>{plant.plantName}</h1> 
+         <h1 className='font-bold text-3xl sylefont'>{plant.plantName}</h1> 
          
        
 
