@@ -14,9 +14,11 @@ const Myplant = () => {
 
   const filter = data.filter((dat) => dat.email === user.email); 
 
-  console.log(user.email);
+ 
   
   const [plants, setPlants] = useState(filter);
+
+
   const handleDelete = (id) => {
     Swal.fire({
       title: "Are you sure?",
@@ -67,7 +69,7 @@ const Myplant = () => {
   
 
   return (
-    <div className="w-11/12 mx-auto">
+    <div className="w-11/12 mx-auto  min-h-[calc(100vh-300px)]">
       <div className="text-center pt-10">
         <h1 className="text-4xl font-bold inline-block sylefont">
           My Plants
@@ -115,7 +117,7 @@ const Myplant = () => {
                 </Link>
                 <button
                   onClick={() => handleDelete(res._id)}
-                  className="btn btn-sm bg-red-500 text-white hover:bg-red-600"
+                  className="btn btn-sm text-white hover:bg-red-600"
                 >
                   <FaTrash />
                 </button>
@@ -126,10 +128,10 @@ const Myplant = () => {
       ) : (
         <div className="h-[calc(100vh-300px)]  flex items-center justify-center px-4">
           <div className="text-center py-10">
-            <h1 className="text-2xl font-semibold text-gray-700 mb-4">
+            <h1 className="text-2xl font-semibold mb-4">
               You haven’t added any plants yet!
             </h1>
-            <p className="text-gray-500 mb-6">
+            <p className=" mb-6">
               Start building your green space by adding your first plant.
             </p>
             <Link

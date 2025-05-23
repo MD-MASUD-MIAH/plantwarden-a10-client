@@ -9,7 +9,7 @@ const PlanstCard = ({data}) => {
     
     
     return (
-         <div     ref={ref} className={`max-w-xs overflow-hidden shadow-lg bg-white w-11/12 mx-auto transform transition-all duration-700 ease-out
+         <div     ref={ref} className={`max-w-xs overflow-hidden shadow-lg  w-11/12 mx-auto transform transition-all duration-700 ease-out
            ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'} border border-[#2ecc71]`}>
       {/* Image */}
       <img
@@ -20,7 +20,7 @@ const PlanstCard = ({data}) => {
 
       {/* Content */}
       <div className="p-4">
-        <h3 className="font-semibold text-lg text-black sylefont">
+        <h3 className="font-semibold text-lg  sylefont">
         
         {data.plantName}
         </h3>
@@ -29,7 +29,7 @@ const PlanstCard = ({data}) => {
         </p>
 
         <div className="flex items-center justify-between mt-4">
-          <span className="text-xs font-semibold text-black uppercase">
+          <span className="text-xs font-semibold  uppercase">
           Added Date : {data.addingDate}
           </span>
          <div className="
