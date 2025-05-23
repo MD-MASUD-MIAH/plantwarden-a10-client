@@ -20,7 +20,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        path: "/",
+       
         loader: () =>
           fetch("https://plantwarden-b11a10-server.vercel.app/plants"),
         hydrateFallbackElement: <Loader></Loader>,
@@ -36,11 +36,10 @@ export const router = createBrowserRouter([
       },
       {
         path: "/addplnats",
-        element: (
-          <PrivateRoute>
+        element:<PrivateRoute>
             <Addplants></Addplants>
           </PrivateRoute>
-        ),
+        ,
       },
 
       {
@@ -48,11 +47,7 @@ export const router = createBrowserRouter([
 
         loader: () =>
           fetch("https://plantwarden-b11a10-server.vercel.app/plants"),
-        element: (
-          <PrivateRoute>
-            <Myplant></Myplant>
-          </PrivateRoute>
-        ),
+        element:<PrivateRoute><Myplant></Myplant></PrivateRoute>
       },
       { path: "/login", Component: Login },
       { path: "/register", Component: Register },
@@ -64,11 +59,9 @@ export const router = createBrowserRouter([
             `https://plantwarden-b11a10-server.vercel.app/plants/${params.id}`
           ),
 
-        element: (
-          <PrivateRoute>
-            <DetailsPage></DetailsPage>
-          </PrivateRoute>
-        ),
+        element: <PrivateRoute>
+            <DetailsPage></DetailsPage></PrivateRoute>
+        ,
       },
       {
         path: "/update/:id",
@@ -78,11 +71,9 @@ export const router = createBrowserRouter([
             `https://plantwarden-b11a10-server.vercel.app/plants/${params.id}`
           ),
 
-        element: (
-          <PrivateRoute>
-            <Update></Update>
-          </PrivateRoute>
-        ),
+        element:<PrivateRoute>
+            <Update></Update></PrivateRoute>
+        
       },
     ],
   },

@@ -12,7 +12,10 @@ const Myplant = () => {
 
   const data = useLoaderData();
 
-  const filter = data.filter((dat) => dat.email === user.email);
+  const filter = data.filter((dat) => dat.email === user.email); 
+
+  console.log(user.email);
+  
   const [plants, setPlants] = useState(filter);
   const handleDelete = (id) => {
     Swal.fire({
@@ -47,7 +50,21 @@ const Myplant = () => {
     });
 
     console.log(id);
+
+
+
+
+
+
+
+
+
+
+
   };
+
+  console.log(plants);
+  
 
   return (
     <div className="w-11/12 mx-auto">

@@ -5,7 +5,10 @@ import Swal from 'sweetalert2';
 import { TitleUse } from './title';
 const Login = () => {
 TitleUse('Login')
- const location = useLocation()
+ const location = useLocation() 
+
+ console.log(location);
+ 
 const navigate =  useNavigate() 
   const {loginUser,googleLogin} = use(AuthContext) 
 
@@ -30,7 +33,7 @@ const navigate =  useNavigate()
    timer:1500
 
 });
- navigate(location.state ? location.state : '/');
+ navigate(location?.state ? location.state: '/');
       console.log(res.user);
       
     }).catch(error=>{
@@ -57,14 +60,12 @@ const navigate =  useNavigate()
   icon: "success",
   draggable: true
 });
- navigate(location.state ? location.state : '/');
-    }).catch(error=>{
 
+ navigate(location.state ? location.state : '/'); 
 
-  console.log(error.message);
-
-
-     Swal.fire({
+}).catch(error=>{
+console.log(error.message);
+  Swal.fire({
   icon: "error",
   title: "Oops...",
   text: `${error.message}`,
@@ -89,7 +90,7 @@ const navigate =  useNavigate()
           <label className="block text-sm mb-1">Username or Email</label>
           <input
             required
-            // ref={emailref} 
+         
           name='email'
             type="email"
             className="w-full border-b placeholder:text-xs border-gray-300 focus:outline-none py-1"
@@ -104,6 +105,8 @@ const navigate =  useNavigate()
             className="w-full border-b placeholder:text-xs border-gray-300 focus:outline-none py-1"
             placeholder="Enter your password"
             required
+           
+
           />
         </div>
 
