@@ -32,8 +32,9 @@ const PlanstCard = ({data}) => {
           <span className="text-xs font-semibold text-black uppercase">
           Added Date : {data.addingDate}
           </span>
-         <div className="card-actions justify-end">
-            <Link  to={`/details/${data._id}`} className="btn w-full  bg-[#2ecc71] hover:bg-[#27ae60] text-white font-semibold py-2 px-5  shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">View More</Link>
+         <div className="
+         ">
+            <Link  to={`/details/${data._id}`} className="btn w-full  bg-[#2ecc71] hover:bg-[#27ae60] text-white font-semibold py-2 px-4 shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-ou text-xs">View <span className='hidden md:block'>More</span></Link>
           </div>
         </div>
       </div>
