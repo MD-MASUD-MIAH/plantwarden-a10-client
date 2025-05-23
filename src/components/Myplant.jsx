@@ -69,7 +69,7 @@ const Myplant = () => {
   return (
     <div className="w-11/12 mx-auto">
       <div className="text-center pt-10">
-        <h1 className="text-4xl font-bold inline-block text-gray-800 sylefont">
+        <h1 className="text-4xl font-bold inline-block sylefont">
           My Plants
         </h1>
 
@@ -84,7 +84,7 @@ const Myplant = () => {
           {plants.map((res) => (
             <div
               key={res._id}
-              className="flex flex-col shadow-md rounded-xl overflow-hidden border border-[#2ecc71] bg-white"
+              className="flex flex-col shadow-md rounded-xl overflow-hidden border border-[#2ecc71] "
             >
               <div className="flex flex-col sm:flex-row items-center gap-4 p-4">
                 <img
@@ -93,14 +93,14 @@ const Myplant = () => {
                   className="w-full sm:w-32 h-32 object-contain rounded-xl"
                 />
                 <div className="flex flex-col justify-between flex-grow text-sm sm:text-base">
-                  <p>
+                  <p className="text-inherit">
                     <span className="font-semibold">Name:</span> {res.plantName}
                   </p>
-                  <p>
+                  <p className="text-inherit">
                     <span className="font-semibold">Category:</span>{" "}
                     {res.category}
                   </p>
-                  <p>
+                  <p className="text-inherit">
                     <span className="font-semibold">Added:</span>{" "}
                     {res.addingDate}
                   </p>

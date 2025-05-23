@@ -39,7 +39,7 @@ const AllPlants = () => {
               </button>
             </th>
             <th>Frequency</th>
-            <th></th>
+            <th>Action</th>
           </tr>
         </thead>
 
