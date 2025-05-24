@@ -42,6 +42,8 @@ const Banner = () => {
             src={slide.image_url} 
             alt="" 
             className="  w-full object-cover"
+
+            
           /> 
 
          <div className=" justify-center items-center">

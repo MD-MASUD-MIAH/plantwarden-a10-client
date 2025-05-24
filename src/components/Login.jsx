@@ -80,7 +80,7 @@ console.log(error.message);
         <div>
             
 
-   <div className=' w-11/12 mx-auto py-10 flex flex-col items-center justify-center'>
+   <div className=' w-11/12 mx-auto py-10 flex flex-col items-center justify-center  min-h-[calc(100vh-300px)]'>
 
 
 <div className="md:max-w-sm   mx-auto border border-[#2ecc71] rounded p-6 shadow ">
