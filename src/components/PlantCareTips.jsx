@@ -11,7 +11,7 @@ const PlantCareTips = () => {
   return (
      <div>
             
-<div className="flex flex-col w-11/12 mx-auto md:w-full md:flex-row items-center justify-between md:bg-gradient-to-br from-[#e9fdf1] via-[#d1f7e1] to-[#2ecc71]/20">
+<div className="flex flex-col w-11/12 mx-auto md:w-full md:flex-row mb-4 md:mb-0 items-center justify-between md:bg-gradient-to-br from-[#e9fdf1] via-[#d1f7e1] to-[#2ecc71]/20">
  
   <div className="mb-8 md:mb-0 md:w-1/2 flex justify-center md:justify-end h-80 md:h-[500px]">
     <div className="flex flex-col justify-end h-full">

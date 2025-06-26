@@ -9,11 +9,11 @@ const Root = () => {
 const navigate = useNavigation()
 
     return (
-        <div className='overflow-x-hidden flex flex-col'>
+        <div className=' flex flex-col'>
 
             <Navbar></Navbar>
            
-          <div className='flex-grow'>
+          <div className='flex-grow overflow-x-hidden'>
 
             {
                 navigate.state ==='loading' ? <Loader></Loader> : <Outlet></Outlet>

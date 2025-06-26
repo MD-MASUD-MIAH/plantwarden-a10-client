@@ -81,9 +81,9 @@ const AllPlants = () => {
                 <th>
                   <Link
                     to={`/details/${plant._id}`}
-                    className="btn btn-ghost btn-xs text-[#2ecc71]"
+                    className="btn btn-ghost btn-[14px] text-[#2ecc71]"
                   >
-                    Details
+                    see more
                   </Link>
                 </th>
               </tr>

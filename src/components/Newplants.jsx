@@ -22,8 +22,8 @@ const Newplants = ({ plants }) => {
 
   return (
     <div>
-      <div className="my-12">
-        <h1 className="text-center pt-10 text-4xl font-bold sylefont">
+      <div className="my-5">
+        <h1 className="text-center text-4xl pt-5 font-bold sylefont">
           Your New Plant Buddies
         </h1>
 
@@ -38,8 +38,8 @@ const Newplants = ({ plants }) => {
         </p>
       </div>
 
-      <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-3 md:gap-20 py-10">
-        {tree?.slice(0, 6)?.map((data) => (
+      <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-4 md:gap-10 pt-5 pb-10">
+        {tree?.slice(0, 8)?.map((data) => (
           <PlanstCard key={data._id} data={data}></PlanstCard>
         ))}
       </div>
