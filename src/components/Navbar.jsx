@@ -47,22 +47,21 @@ const Navbar = () => {
     <>
       <NavLink to="/">Home</NavLink>
       <NavLink to="/allplans">All Plants</NavLink>
-      {user && (
-        <>
-          <NavLink to="/addplnats">Add Plant</NavLink>
-          <NavLink to="/myplants">My Plants</NavLink>
-        </>
-      )}
+     
 
       {/* Open the modal using document.getElementById('ID').showModal() method */}
+     <Popover className="relative hidden md:block ">
+  <Popover.Button> {isDark ? "🌙 Dark" : "☀️ Light"}</Popover.Button>
+  
+  <Popover.Panel className="absolute z-10 mt-1 -ml-36 w-48 bg-base-100 border border-gray-300 rounded shadow p-4">
+    <ThemeToggle />
+  </Popover.Panel>
+</Popover>
 
-      <Popover className="relative">
-        <Popover.Button>{isDark ? "🌙 Dark" : "☀️ Light"}</Popover.Button>
-
-        <Popover.Panel className="absolute z-10 mt-1 -ml-36 w-48 bg-base-100 border border-gray-300 rounded shadow p-4">
-          <ThemeToggle></ThemeToggle>
-        </Popover.Panel>
-      </Popover>
+<div className="block md:hidden">
+  <ThemeToggle />
+</div>
+     <NavLink to={'/dashboard'}>Dashboard</NavLink>
     </>
   );
   return (

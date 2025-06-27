@@ -11,6 +11,13 @@ import Myplant from "../components/Myplant";
 import Register from "../components/Register";
 import Update from "../components/Update";
 import PrivateRoute from "../contexts/PrivateRoute";
+import DashboardLayout from "../Root/DashboardLayout";
+import ManuSatatic from "../components/ManuSatatic";
+import Star from "../components/Star";
+import Profile from "../components/Profile";
+import TermsAndConditions from "../components/TermsAndConditions";
+import About from "../components/About";
+import HelpComponent from "../components/HelpComponent";
 
 export const router = createBrowserRouter([
   {
@@ -51,6 +58,9 @@ export const router = createBrowserRouter([
       },
       { path: "/login", Component: Login },
       { path: "/register", Component: Register },
+      {path:'//terms',Component:TermsAndConditions},
+      {path:'/about',Component:About},
+      {path:'/help',Component:HelpComponent},
       {
         path: "/details/:id",
 
@@ -77,4 +87,19 @@ export const router = createBrowserRouter([
       },
     ],
   },
+
+  {
+
+    path:'/dashboard',element:<PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute> ,children:[
+
+      {index:true , Component:Star},
+      {path:'myplants',  loader: () =>
+          fetch("https://plantwarden-b11a10-server.vercel.app/plants"),
+        element:<PrivateRoute><Myplant></Myplant></PrivateRoute>},
+        {path:'addplnats', element:<PrivateRoute>
+            <Addplants></Addplants>
+          </PrivateRoute>},
+          {path:'profile',Component:Profile}
+    ]
+  }
 ]);

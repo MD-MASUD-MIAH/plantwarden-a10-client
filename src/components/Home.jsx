@@ -6,6 +6,7 @@ import PlantsFe from './PlantsFe';
 import PlantCareTips from './PlantCareTips';
 import MyLottie from './MyLottie';
 import { TitleUse } from './title';
+import UserReview from './UserReview';
 
 const Home = () => {
     TitleUse('Home')
@@ -18,6 +19,7 @@ const Home = () => {
            <Newplants plants={plants}></Newplants> 
         
            <PlantCareTips></PlantCareTips> 
+           <UserReview></UserReview>
            <PlantsFe></PlantsFe>
         </div>
     );

@@ -5,19 +5,14 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../contexts/AuthContext";
 import { TitleUse } from "./title";
 const Myplant = () => {
-
-
-  TitleUse('My Plants')
+  TitleUse("My Plants");
   const { user } = use(AuthContext);
 
   const data = useLoaderData();
 
-  const filter = data.filter((dat) => dat.email === user.email); 
+  const filter = data.filter((dat) => dat.email === user.email);
 
- 
-  
   const [plants, setPlants] = useState(filter);
-
 
   const handleDelete = (id) => {
     Swal.fire({
@@ -52,28 +47,14 @@ const Myplant = () => {
     });
 
     console.log(id);
-
-
-
-
-
-
-
-
-
-
-
   };
 
   console.log(plants);
-  
 
   return (
     <div className="w-11/12 mx-auto  min-h-[calc(100vh-300px)]">
       <div className="text-center pt-10">
-        <h1 className="text-4xl font-bold inline-block sylefont">
-          My Plants
-        </h1>
+        <h1 className="text-4xl font-bold inline-block sylefont">My Plants</h1>
 
         <div className="mt-3 flex flex-col items-center space-y-1">
           <span className="w-28 h-[3px] rounded-full bg-[#2ecc71] shadow-md"></span>
@@ -117,7 +98,7 @@ const Myplant = () => {
                 </Link>
                 <button
                   onClick={() => handleDelete(res._id)}
-                  className="btn btn-sm text-white hover:bg-red-600"
+                  className="btn btn-sm text-red-500 bg-red-100  hover:text-white hover:bg-red-500 "
                 >
                   <FaTrash />
                 </button>

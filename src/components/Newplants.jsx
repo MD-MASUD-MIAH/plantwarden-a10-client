@@ -11,14 +11,11 @@ const Newplants = ({ plants }) => {
     fetch(`https://plantwarden-b11a10-server.vercel.app/plants?sortBy=${sort}`)
       .then((res) => res.json())
       .then((data) => {
-
         console.log(data);
-        
+
         setTree(data || []);
       });
   }, [sort, setTree]);
-
-
 
   return (
     <div>
@@ -27,14 +24,12 @@ const Newplants = ({ plants }) => {
           Your New Plant Buddies
         </h1>
 
-        <p className="text-center py-4 text-gray-400 w-[80%] mx-auto">
+        <p className="max-w-xl text-center py-4 px-6 text-gray-400 mx-auto">
           Our green family just got bigger! These new plants are full of charm
-          and character, ready to thrive in <br /> your care. Start your plant
-          journey or expand your collection with these fresh faces.,
-          <span className="hidden md:block">
-            ready to thrive in your care. Start your plant journey or expand
-            your collection with these fresh faces.
-          </span>
+          and character, ready to thrive in your care. Start your plant journey
+          or expand your collection with these fresh faces., ready to thrive in
+          your care. Start your plant journey or expand your collection with
+          these fresh faces.
         </p>
       </div>
 
