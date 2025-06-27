@@ -31,7 +31,7 @@ PlantWarden is a modern, user-friendly web application designed to help plant en
 ## 🚀 Live Link :  [https://plantwarden-10.web.app]
 
 🧩 Backend Repo :
-[ https://github.com/MD-MASUD-MIAH/b11a10-server-side-MD-MASUD-MIAH ]
+[ https://github.com/MD-MASUD-MIAH/plantwarden-a10-server ]
 
 
 
