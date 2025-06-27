@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "simple-firebase-auth2-eabd8"
-  }
+    "default": "simple-firebase-auth2-eabd8",
+    "y": "plantwarden-10",
+    "n": "plantwarden-10"
+  },
+  "targets": {},
+  "etags": {}
 }

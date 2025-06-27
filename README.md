@@ -28,8 +28,35 @@ PlantWarden is a modern, user-friendly web application designed to help plant en
 
 ---
 
-## 🚀 Live Link :  [https://simple-firebase-auth2-eabd8.web.app]
+## 🚀 Live Link :  [https://plantwarden-10.web.app]
+
+🧩 Backend Repo :
+[ https://github.com/MD-MASUD-MIAH/b11a10-server-side-MD-MASUD-MIAH ]
 
 
 
 
+
+
+🧪 Local Setup Instructions Follow these steps to run SpeakFlow on your local machine:
+⚙️ Prerequisites Make sure you have installed:
+
+Node.js (v18 or later)
+
+npm or yarn
+
+MongoDB (local or cloud like MongoDB Atlas)
+
+🔐 Environment Variables
+
+VITE_API_KEY=...
+
+VITE_AUTH_DOMAIN=...
+
+VITE_PROJECT_ID=...
+
+VITE_STORAGE_BUCKET=...
+
+VITE_MESSAGING_SENDER_ID=...
+
+VITE_APP_ID=...
